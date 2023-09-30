@@ -1,0 +1,92 @@
+openapi: 3.0.0
+
+paths: 
+  "/add":
+    post:
+      summary: accepts a transaction
+      operationId: addTransaction
+      requestBody:
+        description: transaction data
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Transaction"
+      responses:
+        '200':
+          description: transaction received
+        default:
+          description: unexpectedError
+
+  /spend:
+    post:
+      summary: spends points
+      operationId: spendPoints
+      requestBody:
+        description: points to spend
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': "#/components/schemas/Points"
+      responses:
+        '200':
+          description: points spent
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  '$ref': "#/components/schemas/PointsSpent"
+        '400':
+          description: unexpectedError
+
+    /balance:
+      get:
+        summary: gets balance
+        responses:
+          '200':
+            description: balance returned
+            content:
+              application/json:
+                schema:
+                  '$ref': "#/components/schemas/Balance"
+          '400':
+            content:
+              text/plain:
+                schema:
+                  type: string
+
+
+components:
+  schemas:
+    Transaction:
+      type: object
+      required:
+      - payer
+      - points
+      - timestamp
+      properties:
+        payer:
+          type: string
+        points:
+          type: integer
+        timestamp:
+          type: string
+
+    PointsSpent:
+      type: object
+      required:
+      - payer
+      - points
+      properties:
+        payer:
+          type: string
+        points:
+          type: integer
+
+    Balance:
+      type: string
+
+    Points:
+      type: integer
