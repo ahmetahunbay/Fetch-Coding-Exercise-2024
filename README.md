@@ -1,6 +1,6 @@
 This is my Fetch 2024 internship take home project. It is written entirely in Go, but uses SQLite for a persistent data store
 
-To run this code, you will need to download SQLite [here](https://www.sqlite.org/download.html), and [Go](https://go.dev/doc/install) here.
+To run this code, you will need to download SQLite [here](https://www.sqlite.org/download.html), and Go [here](https://go.dev/doc/install).
 
 The database uses the name "FetchExerciseData.db", so if you hava another db of the same name, I would ask you to please change it. 
 
