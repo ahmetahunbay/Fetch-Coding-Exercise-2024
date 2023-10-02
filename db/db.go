@@ -1,6 +1,7 @@
 package db
 
 import (
+	"Fetch-Coding-Exercise2024/config"
 	"Fetch-Coding-Exercise2024/structs"
 	"container/heap"
 	"database/sql"
@@ -26,7 +27,7 @@ transactions stores transaction info with a uuid key for hashing
 */
 func InitDB() {
 	var err error
-	db, err = sql.Open("sqlite3", "FetchExerciseData.db")
+	db, err = sql.Open("sqlite3", config.GetDBName())
 	if err != nil {
 		log.Fatal(err)
 	}
