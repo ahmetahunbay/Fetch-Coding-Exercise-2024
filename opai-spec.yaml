@@ -1,7 +1,0 @@
-package: api
-generate:
-  chi-server: true
-  models: true
-  embedded-spec: true
-  client: true
-output: ./api.go
