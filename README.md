@@ -2,7 +2,7 @@ This is my Fetch 2024 internship take home project. It is written entirely in Go
 
 To run this code, you will need to download SQLite [here](https://www.sqlite.org/download.html), and Go [here](https://go.dev/doc/install).
 
-The database uses the name "FetchExerciseData.db", so if you hava another db of the same name, I would ask you to please change it. 
+The database uses the name "FetchExerciseData.db". If you have another db of the same name, you can change the name in the config file.
 
 There are 4 main API routes you can run. The 3 from the spec, and an additional one: /clear. This additional endpoint is a DELETE method that clears the database and cache, if you want to start fresh.
 
