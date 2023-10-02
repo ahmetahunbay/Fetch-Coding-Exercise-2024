@@ -16,7 +16,7 @@ You can then run the code by running the main executable with the following comm
 
 You can call the endpoints from [here](https://www.postman.com/ahmetahunbay/workspace/fetch-coding-exercise-2024/request/30177900-f8c5bdb0-8f0f-47e6-94af-cf8dc765d6ab) -- my public postman workspace
 
-Otherwise, if you have [curl](https://www.bing.com/search?q=curl+download&cvid=2e9113c250074d28b74890c8399c27e6&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIECAEQADIECAIQADIECAMQADIECAQQADIECAUQADIECAYQADIECAcQADIECAgQANIBCDM5MDFqMGo5qAIAsAIA&FORM=ANAB01&PC=LCTS) installed, you can call the api endpoints using the following commands:
+Otherwise, if you have [curl](https://curl.se/download.html) installed, you can call the api endpoints using the following commands:
 
 for /add route, run:
 curl -X POST -H "Content-Type: application/json" -d '{ "payer": "DANNON", "points": 400, "timestamp": "2022-11-02T14:00:00Z" }' http://localhost:8000/add
